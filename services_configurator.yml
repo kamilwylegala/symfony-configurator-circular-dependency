@@ -1,0 +1,12 @@
+services:
+
+    _defaults:
+        autowire: true
+        public: true
+
+    Services\EntityConfigurator: ~
+
+    Services\EntityValidator: ~
+
+    Services\Entity:
+        configurator: ['@Services\EntityConfigurator', 'configure']

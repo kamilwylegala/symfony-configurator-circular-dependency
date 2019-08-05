@@ -1,0 +1,13 @@
+services:
+
+    _defaults:
+        autowire: true
+        public: true
+
+    Services\EntityFactory:
+        class: Services\EntityFactory
+
+    Services\EntityValidator: ~
+
+    Services\Entity:
+        factory: ['@Services\EntityFactory', 'createEntity']
